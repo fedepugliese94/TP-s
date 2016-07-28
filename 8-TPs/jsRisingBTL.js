@@ -20,7 +20,7 @@ function ComenzarIngreso ()
 
 
  			
- 	while(edad < 18 || edad > 90)
+ 	while(edad < 18 || edad > 90 || isNaN(edad))
  		{
  			alert("Ingresar edad entre 18 y 90 años");
  			edad = prompt("Ingrese edad entre 18 y 90 años");
@@ -28,7 +28,7 @@ function ComenzarIngreso ()
  		}
  		document.getElementById('Edad').value = edad;
 		
-	while(sexo > 0 || sexo <3)
+	while(sexo > 0 || sexo <3 || !isNaN(sexo))
 		{
 		 	alert("Ingrese sexo M si es masculino o F si es femenino");
 		 	sexo = prompt("Ingrese su sexo");
@@ -38,7 +38,7 @@ function ComenzarIngreso ()
 		 		
 		
 
-	while(estadoCivil>5 || estadoCivil <0)
+	while(estadoCivil>5 || estadoCivil <0 isNaN(estadoCivil))
 		{
 				alert("Ingresar estado civil siendo 1-soltero, 2-casado, 3-divorciado y 4-viudo");
 				estadoCivil = prompt("Ingrese su estado civil");
@@ -47,7 +47,7 @@ function ComenzarIngreso ()
 		document.getElementById('EstadoCivil').value=estadoCivil;
 
 
-	while(sueldoBruto<8000)
+	while(sueldoBruto<8000 || isNaN(sueldoBruto))
 		{
 			alert("Su sueldo no puede ser menor a $8000 bruto");
 			sueldoBruto = prompt("Ingrese su sueldo bruto");
@@ -55,7 +55,7 @@ function ComenzarIngreso ()
 		document.getElementById('Sueldo').value=sueldoBruto;
 
 
-	while(legajo<1000)
+	while(legajo<1000 || isNaN(legajo))
 		{
 			alert("El legajo no debe tener ceros a la izquierda");
 			legajo= prompt("Ingresar legajo de cuatro cifras");
